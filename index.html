@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+    <div id="transition-frame">
+        <h1>Welcome to the Card Generator!</h1>
+    </div>
+
+    <div class="container">
+        <!-- Input Section -->
+        <div class="input-section">
+            <h2>Make your own card!</h2>
+            <!-- Background Color Selection -->
+            <div class="bg-colors">
+                <p>Background Colors</p>
+                <div class="color-box" data-color="var(--orange)" style="background-color: var(--orange);"></div>
+                <div class="color-box" data-color="var(--blue)" style="background-color: var(--blue);"></div>
+                <div class="color-box" data-color="var(--pink)" style="background-color: var(--pink);"></div>
+                <div class="color-box" data-color="var(--red)" style="background-color: var(--red);"></div>
+                <div class="color-box" data-color="var(--bright-orange)" style="background-color: var(--bright-orange);"></div>
+            </div>
+            <!-- Text Input -->
+            <div class="text-input">
+                <p>Enter Text</p>
+                <input type="text" id="poster-text" placeholder="what do you want your card to say?">
+            </div>
+            <!-- Sweet-Salty Bar -->
+            <div class="scroll-bar">
+                <p>Sweet ↔ Salty</p>
+                <input type="range" id="sweet-salty" min="0" max="4" step="1">
+            </div>
+            <!-- Spicy-Bland Bar -->
+            <div class="scroll-bar">
+                <p>Spicy ↔ Bland</p>
+                <input type="range" id="spicy-bland" min="0" max="2" step="1">
+            </div>
+
+            <div class="scroll-bar">
+                <p>Tangy ↔ Subtle</p>
+                <input type="range" id="sun-moon" min="1" max="4" step="1">
+            </div>
+
+            <div class="scroll-bar">
+                <p>Bitter ↔ Sour </p>
+                <input type="range" id="bitter-sour" min="1" max="60" step="1">
+            </div>
+
+            <div class="border-colors">
+                <p>Border Colors</p>
+                <div class="color-box border-color" data-color="var(--orange)" style="background-color: var(--orange);"></div>
+                <div class="color-box border-color" data-color="var(--blue)" style="background-color: var(--blue);"></div>
+                <div class="color-box border-color" data-color="var(--pink)" style="background-color: var(--pink);"></div>
+                <div class="color-box border-color" data-color="var(--red)" style="background-color: var(--red);"></div>
+                <div class="color-box border-color" data-color="var(--bright-orange)" style="background-color: var(--bright-orange);"></div>
+            </div>
+            <div id="controls">
+                <!-- Existing Controls -->
+                <button id="save-card">Save Card</button>
+              </div>
+              <div id="saved-card-container"></div>
+              <div id="variation-cards-container"></div>
+              
+        </div>
+
+        <!-- Poster Section -->
+        <div class="poster-section">
+            <div id="poster">
+                <p id="poster-text-display">Your text here</p>
+                <div id="poster-inner-border"></div> 
+                <div id="sun-moon-display" ></div>
+                <div class="corner top-left"></div>
+                <div class="corner top-right"></div>
+                <div class="corner bottom-left"></div>
+                <div class="corner bottom-right"></div>
+              
+            </div>
+        </div>
+
+        <!-- Card Deck Section -->
+        <div class="deck-section">
+            <h2>Complete Your Own Deck</h2>
+            <div class="card-gallery">
+                <div class="card-slot" id="slot-1"></div>
+                <div class="card-slot" id="slot-2"></div>
+                <div class="card-slot" id="slot-3"></div>
+                <div class="card-slot" id="slot-4"></div>
+                <div class="card-slot" id="slot-5"></div>
+                <div class="card-slot" id="slot-6"></div>
+                <div class="card-slot" id="slot-7"></div>
+                <div class="card-slot" id="slot-8"></div>
+                <div class="card-slot" id="slot-9"></div>
+                <div class="card-slot" id="slot-10"></div>
+                <div class="card-slot" id="slot-11"></div>
+                <div class="card-slot" id="slot-12"></div>
+                <div class="card-slot" id="slot-13"></div>
+                <div class="card-slot" id="slot-14"></div>
+                <div class="card-slot" id="slot-15"></div>
+                <div class="card-slot" id="slot-16"></div>
+                <div class="card-slot" id="slot-17"></div>
+                <div class="card-slot" id="slot-18"></div>
+                <div class="card-slot" id="slot-19"></div>
+                <div class="card-slot" id="slot-20"></div>
+                <div class="card-slot" id="slot-21"></div>
+                <div class="card-slot" id="slot-22"></div>
+                <div class="card-slot" id="slot-23"></div>
+                <div class="card-slot" id="slot-24"></div>
+                <div class="card-slot" id="slot-25"></div>
+                <div class="card-slot" id="slot-26"></div>
+                <div class="card-slot" id="slot-27"></div>
+                <div class="card-slot" id="slot-28"></div>
+                <div class="card-slot" id="slot-29"></div>
+                <div class="card-slot" id="slot-30"></div>
+                <div class="card-slot" id="slot-31"></div>
+                <div class="card-slot" id="slot-32"></div>
+                <div class="card-slot" id="slot-33"></div>
+                <div class="card-slot" id="slot-34"></div>
+                <div class="card-slot" id="slot-35"></div>
+                <div class="card-slot" id="slot-36"></div>
+                <div class="card-slot" id="slot-37"></div>
+                <div class="card-slot" id="slot-38"></div>
+                <div class="card-slot" id="slot-39"></div>
+                <div class="card-slot" id="slot-40"></div>
+                <div class="card-slot" id="slot-41"></div>
+                <div class="card-slot" id="slot-42"></div>
+                <div class="card-slot" id="slot-43"></div>
+                <div class="card-slot" id="slot-44"></div>
+                <div class="card-slot" id="slot-45"></div>
+                <div class="card-slot" id="slot-46"></div>
+                <div class="card-slot" id="slot-47"></div>
+                <div class="card-slot" id="slot-48"></div>
+                <div class="card-slot" id="slot-49"></div>
+                <div class="card-slot" id="slot-50"></div>
+                <div class="card-slot" id="slot-51"></div>
+                <div class="card-slot" id="slot-52"></div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

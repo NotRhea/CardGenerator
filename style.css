@@ -1,0 +1,318 @@
+:root {
+    --orange: #e17127;
+    --blue: #25408f;
+    --pink: #f7aca9;
+    --red: #cc302d;
+    --bright-orange: #ff8329;
+}
+@font-face {
+    font-family: 'PPEditorialOld';
+    src: url('fonts/PP Editorial Old - Free For Personal Use v1.0 2/otf/PPEditorialOld-Regular.otf') format('opentype'),
+         url('fonts/PP Editorial Old - Free For Personal Use v1.0 2/otf/PPEditorialOld-Regular.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'PPRightSerifMono';
+    src: url('fonts/PP Right Serif Mono - Free for Personal Use v1.0/otf/PPRightSerifMono-Dark.otf') format('opentype'),
+         url('fonts/PP Right Serif Mono - Free for Personal Use v1.0/otf/PPRightSerifMono-Dark.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'PPRader';
+    src: url('fonts/PPRader-Free for personal use v1.0 2/PPRader-Bold.otf') format('opentype'),
+         url('fonts/PPRader-Free for personal use v1.0 2/PPRader-Bold.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'PPTalisman';
+    src: url('fonts/PP Talisman - Free for Personal Use v1.0 2/OTF/PPTalisman-Bold.otf') format('opentype'),
+         url('fonts/PP Talisman - Free for Personal Use v1.0 2/OTF/PPTalisman-Bold.otf') format('opentype');
+  }
+  
+  @font-face {
+    font-family: 'FontFive';
+    src: url('fonts/FontFive.woff2') format('woff2'),
+         url('fonts/FontFive.woff') format('woff');
+  }
+ 
+  
+body {
+    font-family: 'PPEditorialOld';
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #F1E4DB;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.input-section {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+margin-top: 30px;
+    border: dashed blue;
+    border-radius: 10px;
+    height: 100vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.poster-section {
+    flex: 2;
+    display: flex;
+    justify-content: flex-start; /* Aligns poster to the start */
+    align-items: flex-start; /* Aligns poster to the top */
+    margin-top: 20px; /* Optional: Adds some space above if needed */
+}
+
+#poster {
+    width: 400px;
+    height: 600px;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow: hidden; 
+}
+#poster-inner-border {
+    width: 100%;
+    height: 100%;
+    border: solid var(--blue); 
+    box-sizing: border-box;
+    position: absolute;
+    pointer-events: none; }
+
+.corner {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    position: absolute;
+}
+
+.top-left { top: 10px; left: 10px; }
+.top-right { top: 10px; right: 10px; }
+.bottom-left { bottom: 10px; left: 10px; }
+.bottom-right { bottom: 10px; right: 10px; }
+
+#poster-text-display {
+    font-size: 24px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 100px;
+    word-wrap: break-word;
+}
+
+
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+    display: inline-block;
+    border: 0.5px solid #fff;
+    box-shadow: 0 2px 4px rgba(29, 26, 26, 0.2);
+    transition: border 0.3s;
+    border-radius: 10px;
+}
+
+.color-box:hover {
+    border: 2px solid #000;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #000dff;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-top: 10px;
+    color: #04062f
+}
+
+
+/* Scrollbar Container */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: #000dff;
+    height: 10px;
+    border-radius: 10px;
+}
+
+/* Thumb (The draggable handle) */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 100px;
+    height: 100x;
+    background: #000dff;
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Change thumb on hover */
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: var(--bright-orange);
+}
+
+/* Track for non-webkit browsers (Fallback) */
+input[type="range"]::-moz-range-track {
+    background: linear-gradient(to right, var(--orange), var(--pink));
+    height: 6px;
+    border-radius: 10px;
+}
+
+/* Thumb for non-webkit browsers (Fallback) */
+input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--blue);
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Adjustments for Internet Explorer */
+input[type="range"]::-ms-track {
+    background: linear-gradient(to right, var(--orange), var(--pink));
+    height: 6px;
+    border-radius: 10px;
+    border-color: transparent; /* Hides any inner ticks */
+}
+
+input[type="range"]::-ms-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--blue);
+    border: 2px solid var(--red);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bright-orange); /* Background color of your choice */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'PPEditorialOld';
+    font-size: 2rem;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Smooth fade-out */
+}
+
+#transition.hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction after it's hidden */
+}
+
+
+
+/* Transition Frame */
+#transition-frame {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue); /* Background color of your choice */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'PPEditorialOld';
+    font-size: 2rem;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* Smooth fade-out */
+}
+
+#transition-frame.hidden {
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction after it's hidden */
+}
+
+#sun-moon-display {
+    position: absolute;
+    color: #0e74f0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  /* Mustard color for shapes */
+    font-size: 40px;
+}
+
+#save-card {border: dashed #000d7f;
+    background-color:#ffffff;
+    padding: 10px;
+    border-radius: 10px;
+   font-family: 'PPEditorialOld';
+
+
+}
+
+.deck-section {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .card-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .card-slot {
+    width: 100px; /* Adjust as needed */
+    height: 150px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px; 
+    padding: 10px;
+    color: #ddd;
+    font-family: inherit;/* Adjust as needed */
+    box-sizing: border-box; /* Ensures border is inside */
+    border: 1px dashed #000d7f; /* Default border (can be updated dynamically) */
+    border-radius: 0; /* Default radius (can be updated dynamically) */
+  }
+
+
+.card-slot div:first-child {
+    flex: 1; /* Center the shape */
+}
+
+.card-slot div:last-child {
+    margin-top: auto; /* Push the text to the bottom */
+}
